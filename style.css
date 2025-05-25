@@ -1,5 +1,40 @@
 /* Add you CSS here */
 
+/* Navigation bar styles */
+.navbar {
+  background-color: transparent; /* Remove background color */
+  padding: 1rem;
+}
+
+.navbar ul {
+  list-style-type: none;    /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;            /* Display items in a row */
+  justify-content: center;  /* Center the items */
+  gap: 32px;                /* Space between each nav item */
+}
+
+.navbar li {
+  display: inline;
+  font-family: 'Chakra Petch', Arial, sans-serif; /* Use Chakra Petch for nav items */
+  text-decoration: solid 4px rgba(255, 249, 196, 0.7) underline;
+}
+
+.navbar a {
+  text-decoration: none;    /* Remove underline from links */
+  color: #222;              /* Text color */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #ffe4ec; /* Light pink on hover */
+}
+
 /* Set a clean background and font for the whole page */
 body {
   font-family: Arial, sans-serif;
@@ -11,10 +46,45 @@ body {
 
 /* Style for the hero section */
 .hero {
-  background-color: #fff9c4; /* Pastel yellow background */
+  background-color: transparent; /* Remove background color */
   color: #222;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+}
+
+/* Place hero text and nav above the image */
+.hero h1,
+.hero p,
+.hero .navbar {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
 }
 
 .picture {
@@ -24,7 +94,7 @@ body {
 /* Style for the bio section */
 .bio {
   background-color: #e09cb4; /* Dark pastel pink background */
-  margin: 20px auto;
+  margin: 2rem auto;
   max-width: 600px;
   padding: 20px;
   border-radius: 8px;
@@ -34,15 +104,16 @@ body {
 /* Style for the skills section */
 .skills {
   background-color: #e09cb4; /* Dark pastel pink background */
-  margin: 20px auto;
+  margin: 2rem auto;
   max-width: 600px;
-  padding: 20px;
+  padding: 1rem;
   border-radius: 8px;
 }
 
 /* Center all h2 headings */
 h2 {
   text-align: center;
+  text-decoration: underline; /* Add underline to h2 */
 }
 
 /* Display the skills list horizontally */
@@ -64,10 +135,8 @@ h2 {
 
 /* Style for skill icons */
 .skill-icon {
-  width: 56px;              /* Make icons larger */
-  height: 56px;
-  margin-right: 0;
-  margin-bottom: 8px;
+  width: 80px;              /* Make icons larger */
+  height: 80px;
   vertical-align: middle;
 }
 
@@ -102,38 +171,6 @@ main > section {
   font-size: 16px;
 }
 
-/* Navigation bar styles */
-.navbar {
-  background-color: #fff9c4; /* Match pastel yellow header */
-  padding: 1rem;
-}
-
-.navbar ul {
-  list-style-type: none;    /* Remove bullet points */
-  margin: 0;
-  padding: 0;
-  display: flex;            /* Display items in a row */
-  justify-content: center;  /* Center the items */
-  gap: 32px;                /* Space between each nav item */
-}
-
-.navbar li {
-  display: inline;          /* Display list items inline */
-}
-
-.navbar a {
-  text-decoration: none;    /* Remove underline from links */
-  color: #222;              /* Text color */
-  font-weight: bold;
-  font-size: 18px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-.navbar a:hover {
-  background-color: #ffe4ec; /* Light pink on hover */
-}
 
 /* Center the paragraph in the contact section */
 .contact p {
@@ -144,5 +181,15 @@ main > section {
 .contact a {
   text-decoration: none;
   color: #222;
+}
+
+/* Use Chakra Petch font for h1 and h2 */
+h1, h2 {
+  font-family: 'Chakra Petch', Arial, sans-serif;
+}
+
+/* Set h1 font size to 2rem */
+h1 {
+  font-size: 3rem;
 }
 
