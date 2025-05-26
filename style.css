@@ -1,1 +1,241 @@
 /* Add you CSS here */
+
+/* Navigation bar styles */
+.navbar {
+  background-color: transparent; /* Remove background color */
+  padding: 1rem;
+}
+
+.navbar ul {
+  list-style-type: none;    /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;            /* Display items in a row */
+  justify-content: center;  /* Center the items */
+  gap: 32px;                /* Space between each nav item */
+}
+
+.navbar li {
+  display: inline;
+  font-family: 'Chakra Petch', Arial, sans-serif; /* Use Chakra Petch for nav items */
+  text-decoration: solid 4px rgba(255, 249, 196, 0.7) underline;
+}
+
+.navbar a {
+  text-decoration: none;    /* Remove underline from links */
+  color: #222;              /* Text color */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #ffe4ec; /* Light pink on hover */
+}
+
+/* Set a clean background and font for the whole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe4ec; /* Light pink background */
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the hero section */
+.hero {
+  background-color: transparent; /* Remove background color */
+  color: #222;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+}
+
+/* Place hero text and nav above the image */
+.hero h1,
+.hero p,
+.hero .navbar {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+
+.picture {
+  display: block;
+}
+
+/* Style for the bio section */
+.bio {
+  background-color: #e09cb4;
+  margin: 2rem auto;
+  max-width: 900px;              /* Keep wide background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 4px solid #fff9c4;
+}
+
+/* Limit text width in the about me section for better readability */
+.bio p {
+  max-width: 55ch;               /* Limit text width to 55 characters */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  line-height: 1.5;              /* Make line spacing a little wider */
+}
+
+/* Style for the skills section */
+.skills {
+  background-color: #e09cb4; /* Dark pastel pink background */
+  margin: 2rem auto;
+  max-width: 900px;        /* Make section wider */
+  padding: 1rem;
+  border-radius: 8px;
+  border: 4px solid #fff9c4; /* Add pastel yellow border */
+}
+
+
+/* Center all h2 headings */
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;      /* Make underline 4px thick */
+  text-underline-offset: 6px;          /* Add some space below text */
+  text-decoration-color: #fff9c4;      /* Yellow underline */
+}
+
+/* Display the skills list horizontally */
+.skills ul {
+  list-style-type: none;
+  padding: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+  /* Center the whole skills list */
+  width: 100%;
+}
+
+/* Stack icon and label vertically in each skill */
+.skills li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center icon and label vertically */
+  position: relative;
+  left: -40px;
+}
+
+/* Style for skill icons */
+.skill-icon {
+  width: 90px;
+  height: 90px;
+  border: none;
+  padding: 2rem auto;
+  margin: 0 auto;
+  display: block;           /* Ensure icon is a block element */
+}
+
+/* Make all images round with a border */
+img{
+  border-radius: 50%;           /* Makes the image round */
+  border: 4px solid #fff9c4;   /* Dark pastel pink border */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add some space between sections */
+section {
+  margin-bottom: 20px;
+}
+
+/* Add 1rem margin between each section inside main */
+main > section {
+  margin-bottom: 1rem;
+}
+
+/* Footer styles */
+.footer {
+  border-top: 4px solid #e09cb4; /* Dark pastel pink border */
+  background-color: #fff9c4; /* Pastel yellow background */
+  color: #222;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+
+/* Center the paragraph in the contact section */
+.contact p {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Remove underline from links in the contact section */
+.contact a {
+  text-decoration: none;
+  color: #222;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+/* Add hover animation to contact link to match nav */
+.contact a:hover {
+  background-color: #ffe4ec; /* Light pink on hover */
+}
+
+/* Use Chakra Petch font for h1 and h2 */
+h1, h2 {
+  font-family: 'Chakra Petch', Arial, sans-serif;
+}
+
+/* Set h1 font size to 2rem */
+h1 {
+  font-size: 3rem;
+}
+
+/* Style for the contact section to match about me */
+.contact {
+  background-color: #e09cb4; /* Dark pastel pink background */
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 4px solid #fff9c4; /* Pastel yellow border */
+}
+
