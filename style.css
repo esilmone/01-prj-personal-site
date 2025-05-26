@@ -95,55 +95,68 @@ body {
 .bio {
   background-color: #e09cb4; /* Dark pastel pink background */
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 900px;          /* Make section wider */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 4px solid #fff9c4; /* Add pastel yellow border */
 }
 
 /* Style for the skills section */
 .skills {
   background-color: #e09cb4; /* Dark pastel pink background */
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 900px;          /* Make section wider */
   padding: 1rem;
   border-radius: 8px;
+  border: 4px solid #fff9c4; /* Add pastel yellow border */
 }
 
 /* Center all h2 headings */
 h2 {
   text-align: center;
-  text-decoration: underline; /* Add underline to h2 */
+  text-decoration: underline;
+  text-decoration-thickness: 4px;      /* Make underline 4px thick */
+  text-underline-offset: 6px;          /* Add some space below text */
+  text-decoration-color: #fff9c4;      /* Yellow underline */
 }
 
 /* Display the skills list horizontally */
 .skills ul {
-  list-style-type: none;    /* Remove bullet points */
-  padding: 0 auto;         /* Remove left padding */
-  display: flex;            /* Display items in a row */
-  justify-content: space-evenly; /* Evenly space skill items */
+  list-style-type: none;
+  padding: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 24px;                /* Space between each skill */
+  gap: 24px;
+  /* Center the whole skills list */
+  width: 100%;
 }
 
 /* Stack icon and label vertically in each skill */
 .skills li {
   display: flex;
-  flex-direction: column;   /* Stack children vertically */
-  align-items: center;      /* Center icon and text */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center icon and label vertically */
+  position: relative;
+  left: -40px;
 }
 
 /* Style for skill icons */
 .skill-icon {
-  width: 80px;              /* Make icons larger */
-  height: 80px;
-  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+  border: none;
+  padding: 2rem auto;
+  margin: 0 auto;
+  display: block;           /* Ensure icon is a block element */
 }
 
 /* Make all images round with a border */
 img{
   border-radius: 50%;           /* Makes the image round */
-  border: 4px solid #e09cb4;    /* Dark pastel pink border */
+  border: 4px solid #fff9c4;   /* Dark pastel pink border */
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -163,6 +176,7 @@ main > section {
 
 /* Footer styles */
 .footer {
+  border-top: 4px solid #e09cb4; /* Dark pastel pink border */
   background-color: #fff9c4; /* Pastel yellow background */
   color: #222;
   text-align: center;
@@ -181,6 +195,16 @@ main > section {
 .contact a {
   text-decoration: none;
   color: #222;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+/* Add hover animation to contact link to match nav */
+.contact a:hover {
+  background-color: #ffe4ec; /* Light pink on hover */
 }
 
 /* Use Chakra Petch font for h1 and h2 */
@@ -191,5 +215,16 @@ h1, h2 {
 /* Set h1 font size to 2rem */
 h1 {
   font-size: 3rem;
+}
+
+/* Style for the contact section to match about me */
+.contact {
+  background-color: #e09cb4; /* Dark pastel pink background */
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 4px solid #fff9c4; /* Pastel yellow border */
 }
 
